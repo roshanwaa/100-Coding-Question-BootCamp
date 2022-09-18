@@ -1,9 +1,4 @@
-import java.io.*;
-import java.math.*;
-import java.text.*;
-import java.util.*;
 import java.util.Scanner;
-import java.util.regex.*;
 
 /***
  * Reversenumber
@@ -14,15 +9,16 @@ public class Reversenumber {
     System.out.println("Hello");
     System.out.println("Enter a Number:");
 
-    Scanner sc = new Scanner(System.in);
-    int testCase = sc.nextInt();
-    while (testCase-- > 0) {
-      int a = sc.nextInt();
-      int b = sc.nextInt();
-      int revA = reverse(a);
-      int revB = reverse(b);
-      int ans = reverse(revA + revB);
-      System.out.println(ans);
+    try (Scanner sc = new Scanner(System.in)) {
+      int testCase = sc.nextInt();
+      while (testCase-- > 0) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int revA = reverse(a);
+        int revB = reverse(b);
+        int ans = reverse(revA + revB);
+        System.out.println(ans);
+      }
     }
   }
 
